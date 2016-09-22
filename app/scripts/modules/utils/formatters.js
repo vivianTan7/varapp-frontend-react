@@ -95,6 +95,13 @@ var formatSiftPolyphenPreds = function(v) {
     var text = enumElem(v);
     return <TextShort text={text} maxWords={3}/>;
 };
+var formatFathmm = function(v) {
+    if (!v) {return '';}
+    var text = enumElem(v);
+    text = text.replace(/\ variant$/g, '');
+    return <TextShort text={text} maxWords={40}/>;
+};
+
 
 /* Links */
 
@@ -308,6 +315,7 @@ module.exports = {
     formatSiftPolyphenPreds,
     formatHGVS,
     formatImpact,
+    formatFathmm,
 
     calculateGenotypesScalingStyle,
     formatGenotypes,
