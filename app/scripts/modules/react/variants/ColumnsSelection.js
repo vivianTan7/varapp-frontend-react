@@ -23,7 +23,7 @@ var OverlayTrigger = ReactBoostrap.OverlayTrigger;
 
 var COLUMNS_DEF = VariantColumnList.COLUMN_DEF;
 var DESCRIPTIONS = HelpTooltipDescriptions.variant_columns;
-var N = 16; // number of items per column
+var N = 18; // number of items per column
 toastr.options = UtilsConstants.TOASTR_OPTIONS;
 var preventDefault = e => e.preventDefault();
 

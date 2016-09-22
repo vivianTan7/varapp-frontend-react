@@ -363,7 +363,7 @@ var COLUMN_DEF = {
         width: 100,
         flexGrow: 1,
         dataKey: 'type',
-        tyle: TYPES.IMPACT
+        type: TYPES.IMPACT
     },
     aa_change: {
         key: "aa_change",
@@ -476,7 +476,7 @@ var COLUMN_DEF = {
 
     cadd_raw: {
         key: "cadd_raw",
-        order: 401,
+        order: 400,
         label: "Raw CADD score",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
@@ -486,7 +486,7 @@ var COLUMN_DEF = {
     },
     cadd_scaled: {
         key: "cadd_scaled",
-        order: 402,
+        order: 401,
         label: "Scaled CADD score",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
@@ -496,7 +496,7 @@ var COLUMN_DEF = {
     },
     clinvar_sig: {
         key: "clinvar_sig",
-        order: 403,
+        order: 402,
         label: "Clinvar sig",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
@@ -506,7 +506,7 @@ var COLUMN_DEF = {
     },
     clinvar_disease_acc: {
         key: "clinvar_disease_acc",
-        order: 404,
+        order: 403,
         label: "Clinvar disease acc.",
         width: 140,
         flexGrow: 1,
@@ -516,7 +516,7 @@ var COLUMN_DEF = {
     },
     gerp_bp_score: {
         key: "gerp_bp_score",
-        order: 405,
+        order: 404,
         label: "GERP score",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
@@ -527,7 +527,7 @@ var COLUMN_DEF = {
     },
     gerp_element_pval: {
         key: "gerp_element_pval",
-        order: 406,
+        order: 405,
         label: "GERP p-value",
         width: FREQ_WIDTH,
         minWidth: FREQ_WIDTH,
@@ -538,7 +538,7 @@ var COLUMN_DEF = {
     },
     polyphen_pred: {
         key: "polyphen_pred",
-        order: 407,
+        order: 406,
         label: "Polyphen pred",
         width: 160,
         flexGrow: 1,
@@ -548,7 +548,7 @@ var COLUMN_DEF = {
     },
     polyphen_score: {
         key: "polyphen_score",
-        order: 408,
+        order: 407,
         label: "Polyphen score",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
@@ -559,7 +559,7 @@ var COLUMN_DEF = {
     },
     sift_pred: {
         key: "sift_pred",
-        order: 409,
+        order: 408,
         label: "SIFT pred",
         width: 160,
         flexGrow: 1,
@@ -569,13 +569,124 @@ var COLUMN_DEF = {
     },
     sift_score: {
         key: "sift_score",
-        order: 410,
+        order: 409,
         label: "SIFT score",
         width: SCORE_WIDTH,
         minWidth: SCORE_WIDTH,
         flexGrow: 1,
         dataKey: "sift_score",
         cellRenderer: formatters.formatScientific,
+        type: TYPES.PATHOGENICITY
+    },
+    fathmm_score: {
+        key: "fathmm_score",
+        order: 410,
+        label: "Fathmm score",
+        width: 160,
+        minWidth: SCORE_WIDTH,
+        flexGrow: 1,
+        dataKey: "fathmm_score",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    fathmm_pred: {
+        key: "fathmm_pred",
+        order: 411,
+        label: "Fathmm pred",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "fathmm_pred",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    fathmm_rankscore: {
+        key: "fathmm_rankscore",
+        order: 412,
+        label: "Fathmm rankscore",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "fathmm_rankscore",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metasvm_score: {
+        key: "metasvm_score",
+        order: 413,
+        label: "MetaSVM score",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metasvm_score",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metasvm_pred: {
+        key: "metasvm_pred",
+        order: 414,
+        label: "MetaSVM pred",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metasvm_pred",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metasvm_rankscore: {
+        key: "metasvm_rankscore",
+        order: 415,
+        label: "MetaSVM rankscore",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metasvm_rankscore",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metalr_score: {
+        key: "metalr_score",
+        order: 416,
+        label: "MetaLR score",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metalr_score",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metalr_pred: {
+        key: "metalr_pred",
+        order: 417,
+        label: "MetaLR pred",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metalr_pred",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    metalr_rankscore: {
+        key: "metalr_rankscore",
+        order: 418,
+        label: "MetaLR rankscore",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "metalr_rankscore",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    provean_score: {
+        key: "provean_score",
+        order: 419,
+        label: "Provean score",
+        width: 160,
+        flexGrow: 1,
+        dataKey: "provean_score",
+        cellRenderer: formatters.formatFathmm,
+        type: TYPES.PATHOGENICITY
+    },
+    provean_pred: {
+        key: "provean_pred",
+        order: 420,
+        label: "Provean pred",
+        width: 120,
+        flexGrow: 1,
+        dataKey: "provean_pred",
+        cellRenderer: formatters.formatFathmm,
         type: TYPES.PATHOGENICITY
     },
 };
